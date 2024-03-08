@@ -13,10 +13,13 @@ GameEngine::GameEngine(IStrategy* strategy)
 void GameEngine::startGame()
 {
     int count = 20;
+    cout << "\n\n\n\t\t\tWelcome to Stone Paper Scissor "
+            "Game\n";
     for(int i = 0 ; i < count; i++)
     {
         char choice;
-        cout<<endl<<"\tEnter your choice (R or P or S)\t";
+        cout << "\n\t\tEnter R for ROCK, P for PAPER, and S "
+                "for SCISSOR\n\t\t\t\t\t";
         cin>>choice;
         char computerChoice = strategy->GenerateComputerResponse(choice);
         cout<<"\tComputer choice =\t"<<computerChoice<<endl;
@@ -28,18 +31,18 @@ void GameEngine::startGame()
         if(userWon(choice,computerChoice))
         {
             userPoints++;
-            cout<<"\tRound result: User won this round"<<endl;
+            cout<<"\tRound result: Congratulations!! User won this round"<<endl;
         }
         else
         {
             computerPoints++;
-            cout<<"\tRound result: Computer won this round"<<endl;
+            cout<<"\tRound result: oh! Computer won this round"<<endl;
         }
     }
     if(userPoints > computerPoints)
-        cout<<endl<<"\t\tMatch result: User won the match"<<endl;
+        cout<<endl<<"\t\tMatch result: Congratulations!! User won the match"<<endl;
     if(computerPoints > userPoints)
-        cout<<endl<<"\t\tComputer won the match"<<endl;
+        cout<<endl<<"\t\t Oh!Computer won the match"<<endl;
     else
         cout<<endl<<"\t\tMatch ended as Tie"<<endl;
 }
