@@ -9,10 +9,10 @@ private:
     IStrategy* strategy;
     int userPoints;
     int computerPoints;
-public:
-    GameEngine(IStrategy* strategy);
-    void startGame();
     bool userWon(char user, char comp);
+public:
+    explicit GameEngine(IStrategy* strategy);
+    void startGame();
 };
 
 #endif // GAMEENGINE_H

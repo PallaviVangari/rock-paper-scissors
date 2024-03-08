@@ -8,7 +8,7 @@ using namespace std;
 GameInitializer::GameInitializer()
 {
     char choice;
-    cout<<"Enter R for random and anything else for special";
+    cout<<"Enter R for random and anything else for special\t\t";
     cin>> choice;
 
     if(choice == 'R')

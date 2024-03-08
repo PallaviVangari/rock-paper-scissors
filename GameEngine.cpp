@@ -16,32 +16,32 @@ void GameEngine::startGame()
     for(int i = 0 ; i < count; i++)
     {
         char choice;
-        cout<<"Enter your choice (R or P or S)";
+        cout<<endl<<"\tEnter your choice (R or P or S)\t";
         cin>>choice;
         char computerChoice = strategy->GenerateComputerResponse(choice);
-        cout<<"Computer choice ="<<computerChoice<<endl;
+        cout<<"\tComputer choice =\t"<<computerChoice<<endl;
         if(choice == computerChoice)
         {
-            cout<<"Tie"<<endl;
+            cout<<"\tRound Result: Tie"<<endl;
             continue;
         }
         if(userWon(choice,computerChoice))
         {
             userPoints++;
-            cout<<"User won this game"<<endl;
+            cout<<"\tRound result: User won this round"<<endl;
         }
         else
         {
             computerPoints++;
-            cout<<"Compuer won this game"<<endl;
+            cout<<"\tRound result: Computer won this round"<<endl;
         }
     }
     if(userPoints > computerPoints)
-        cout<<"User won the match"<<endl;
+        cout<<endl<<"\t\tMatch result: User won the match"<<endl;
     if(computerPoints > userPoints)
-        cout<<"Computer won the match"<<endl;
+        cout<<endl<<"\t\tComputer won the match"<<endl;
     else
-        cout<<"Match ended as Tie"<<endl;
+        cout<<endl<<"\t\tMatch ended as Tie"<<endl;
 }
 
 bool GameEngine::userWon(char user, char comp)
