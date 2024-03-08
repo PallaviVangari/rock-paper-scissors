@@ -13,7 +13,7 @@ GameEngine::GameEngine(IStrategy* strategy)
 void GameEngine::startGame()
 {
     int count = 20;
-    cout << "\n\n\n\t\t\tWelcome to Stone Paper Scissor "
+    cout << "\n\n\n\t\t\tWelcome to Rock Paper Scissor "
             "Game\n";
     for(int i = 0 ; i < count; i++)
     {
