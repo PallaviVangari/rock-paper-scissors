@@ -9,7 +9,7 @@ GameInitializer::GameInitializer()
 {
     char choice;
     cout<<"In this game, you have the option to face off against the computer using one of two distinct strategies: Random Strategy or Smart Strategy. Please select your preferred approach before we commence the game."<<endl;
-    cout<<"Enter R If you want to face off computer with RANDOM STRATEGY or any other character if you want to face off computer with SMART STRATEGY\t\t";
+    cout<<"Enter R If you want to face off computer with RANDOM STRATEGY or any other character for SMART STRATEGY\t\t";
     cin>> choice;
 
     if(choice == 'R')
